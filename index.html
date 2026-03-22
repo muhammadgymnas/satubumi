@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SatuBumi — Program River Cleanup berbasis 9 penelitian terindeks SINTA. 2.343 kg sampah terdokumentasi dari Sungai Citarum. Wisata edukasi lingkungan untuk kampus dan korporasi di Bandung." />
+  <meta name="description" content="SatuBumi: Program River Cleanup berbasis 9 penelitian terindeks SINTA. 2.343 kg sampah terdokumentasi dari Sungai Citarum. Wisata edukasi lingkungan untuk kampus dan korporasi di Bandung." />
   <meta name="theme-color" content="#1B3A2D" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="SatuBumi — Edukasi Lingkungan Berbasis Riset di Sungai Citarum" />
+  <meta property="og:title" content="SatuBumi: Edukasi Lingkungan Berbasis Riset di Sungai Citarum" />
   <meta property="og:description" content="Berbasis 9 penelitian terpublikasi SINTA. 2.343 kg sampah terdokumentasi. Program aktif bersama kampus dan korporasi di Bandung dan Jakarta." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/og-image.jpg" />
 
-  <title>SatuBumi — Wisata Edukasi Lingkungan Berbasis Riset</title>
+  <title>SatuBumi | Wisata Edukasi Lingkungan Berbasis Riset</title>
 
   <!-- Preconnect to Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,13 +45,31 @@
     .section-reveal.revealed{opacity:1;transform:translateY(0)}
 
     /* Prevent FOUC on font load */
+    body{padding-top:64px}
     .container-main{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}
+
+    /* Site header */
+    #site-header{position:fixed;top:0;left:0;right:0;z-index:10000;height:64px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,0.07);display:flex;align-items:center;transition:box-shadow 250ms ease}
+    #site-header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
+    .header-nav{display:none}
+    @media(min-width:768px){.header-nav{display:flex;align-items:center;gap:28px}}
+    .header-nav a{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;color:#4B4B4B;text-decoration:none;transition:color 150ms}
+    .header-nav a:hover{color:#2D5A45}
+    .header-ctas{display:none}
+    @media(min-width:900px){.header-ctas{display:flex;align-items:center;gap:10px}}
 
     @keyframes slideUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
     @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
     @keyframes spin{to{transform:rotate(360deg)}}
     @keyframes draw{to{stroke-dashoffset:0}}
     @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes popIn{0%{opacity:0;transform:scale(0.8)}100%{opacity:1;transform:scale(1)}}
+    /* Hero photo hover overlay */
+    .hero-photo-wrapper .hero-photo-overlay{opacity:0;transition:opacity 350ms ease}
+    .hero-photo-wrapper:hover .hero-photo-overlay{opacity:1}
+    .hero-photo-wrapper img{transition:transform 400ms ease}
+    .hero-photo-wrapper:hover img{transform:scale(1.03)}
   </style>
 
   <!-- Tailwind output (built CSS) -->
@@ -59,6 +77,56 @@
 </head>
 
 <body>
+
+  <!-- ============================================================
+       SITE HEADER — Fixed top navigation
+       ============================================================ -->
+  <header id="site-header" role="banner">
+    <div class="container-main" style="display:flex; align-items:center; justify-content:space-between; width:100%; gap:16px">
+
+      <!-- Logo -->
+      <a href="#hero" style="display:flex; align-items:center; text-decoration:none; flex-shrink:0" aria-label="SatuBumi — ke halaman utama">
+        <img
+          src="assets/images/satubumi-logo.webp"
+          alt="SatuBumi Lestari"
+          loading="eager"
+          style="height:40px; width:auto; object-fit:contain; display:block"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"
+        />
+        <span style="display:none; font-family:'DM Serif Display',serif; font-size:19px; font-weight:700; color:#1B3A2D; letter-spacing:-0.01em">SatuBumi</span>
+      </a>
+
+      <!-- Nav links (desktop) -->
+      <nav class="header-nav" aria-label="Navigasi utama">
+        <a href="#hero">About</a>
+        <a href="#impact-numbers">Dampak</a>
+        <a href="#past-collab">Past Collaboration</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <!-- CTA Buttons (desktop) -->
+      <div class="header-ctas">
+        <a href="#korporasi"
+          style="display:inline-flex; align-items:center; height:38px; padding:0 18px; background:#2D5A45; color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; border-radius:10px; text-decoration:none; transition:background 150ms"
+          onmouseover="this.style.background='#1B3A2D'" onmouseout="this.style.background='#2D5A45'">
+          Korporasi
+        </a>
+        <a href="#kampus"
+          style="display:inline-flex; align-items:center; height:38px; padding:0 18px; background:#0D7377; color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; border-radius:10px; text-decoration:none; transition:background 150ms"
+          onmouseover="this.style.background='#0a5e62'" onmouseout="this.style.background='#0D7377'">
+          Kampus
+        </a>
+        <a href="https://wa.me/62818856993" target="_blank" rel="noopener noreferrer"
+          style="display:inline-flex; align-items:center; gap:6px; height:38px; padding:0 16px; background:#25D366; color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; border-radius:10px; text-decoration:none; transition:background 150ms"
+          onmouseover="this.style.background='#1ebe5d'" onmouseout="this.style.background='#25D366'"
+          aria-label="Chat WhatsApp SatuBumi">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </header>
 
   <!-- ============================================================
        STICKY BOTTOM NAV — Mobile-first dual CTA
@@ -77,12 +145,14 @@
        SECTION 1: HERO
        ============================================================ -->
   <section id="hero" aria-labelledby="hero-headline"
-    style="background:#FFFFFF; padding: 96px 0 0; min-height: 100svh; display:flex; align-items:center; overflow:hidden">
+    style="background:#FFFFFF; padding: clamp(48px, 7vh, 80px) 0 clamp(48px, 6vh, 80px)">
     <div class="container-main">
-      <div style="display:grid; grid-template-columns:1fr; gap:48px; align-items:center">
 
-        <!-- TEXT COLUMN -->
-        <div style="max-width:640px">
+      <!-- ROW 1: Text (left) | SatuBumi Logo panel (right) -->
+      <div id="hero-top-grid" style="display:grid; grid-template-columns:1fr; gap:40px; align-items:center; margin-bottom:40px">
+
+        <!-- LEFT: Text -->
+        <div>
 
           <!-- Trust badge -->
           <div class="hero-anim" data-delay="0" style="margin-bottom:20px">
@@ -94,13 +164,13 @@
 
           <!-- Headline H1 -->
           <h1 id="hero-headline" class="hero-anim" data-delay="100"
-            style="font-size:clamp(28px,5vw,52px); font-weight:700; color:#1A1A1A; margin:0 0 20px; max-width:580px; line-height:1.1">
-            Wisata Edukasi Lingkungan Berbasis Riset di&nbsp;<em style="font-style:italic; color:#2D5A45">Sungai Citarum.</em>
+            style="font-size:clamp(28px,4.5vw,52px); font-weight:700; color:#1A1A1A; margin:0 0 20px; line-height:1.1">
+            Partners for Environmental Education<br/>&amp;&nbsp;<em style="font-style:italic; color:#2D5A45">Waste Management.</em>
           </h1>
 
           <!-- Subheadline -->
           <p class="hero-anim" data-delay="200"
-            style="font-size:clamp(15px,2vw,17px); color:#4B4B4B; margin:0 0 32px; max-width:500px; line-height:1.65">
+            style="font-size:clamp(15px,2vw,17px); color:#4B4B4B; margin:0 0 32px; max-width:480px; line-height:1.65">
             Berbasis 9 penelitian terpublikasi SINTA. 2.343 kg sampah terdokumentasi. Program aktif bersama kampus dan korporasi di Bandung &amp; Jakarta.
           </p>
 
@@ -122,32 +192,64 @@
           </p>
         </div>
 
-        <!-- IMAGE COLUMN -->
-        <div class="hero-img-anim"
-          style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:16/9; background:#E8F2EC"
-          role="img" aria-label="Kegiatan River Cleanup SatuBumi — peserta aktif membersihkan sungai Citarum">
-          <!-- Placeholder SVG — replace src with actual WebP photo -->
-          <img
-            src="assets/images/hero-river-cleanup.webp"
-            alt="Peserta program River Cleanup SatuBumi aktif membersihkan sampah di Sungai Citarum dengan antusias"
-            loading="eager"
-            fetchpriority="high"
-            width="800" height="450"
-            style="width:100%; height:100%; object-fit:cover"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-          />
-          <!-- Fallback placeholder -->
-          <div style="display:none; position:absolute; inset:0; background:linear-gradient(135deg,#1B3A2D,#2D5A45,#4A8C6E); align-items:center; justify-content:center; flex-direction:column; gap:12px">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#B2D8C5" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <p style="color:#B2D8C5; font-size:13px; margin:0; font-family:'Plus Jakarta Sans',sans-serif; text-align:center; max-width:200px">
-              Foto River Cleanup<br/>Sungai Citarum
-            </p>
-          </div>
-          <!-- Gradient overlay (desktop) -->
-          <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(26,26,26,0.15) 0%, transparent 50%)" aria-hidden="true"></div>
-        </div>
+        <!-- RIGHT: SatuBumi logo panel — clean white background -->
+        <div class="hero-img-anim" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background:#FFFFFF; border:1px solid #E8E8E8; border-radius:24px; padding:36px 28px; box-shadow:0 8px 32px rgba(0,0,0,0.06)">
 
+          <!-- Logo image (user-provided WebP) -->
+          <div style="animation:float 4s ease-in-out infinite">
+            <img
+              src="assets/images/satubumi-logo.webp"
+              alt="SatuBumi Lestari"
+              loading="eager"
+              style="max-width:180px; max-height:120px; width:auto; height:auto; object-fit:contain; display:block"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+            />
+            <!-- Fallback brand name text (shown only if image missing) -->
+            <div style="display:none; font-family:'DM Serif Display',serif; font-size:32px; font-weight:700; color:#1B3A2D; letter-spacing:-0.02em; text-align:center">
+              SatuBumi<br/><span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:500; color:#4A8C6E; letter-spacing:0.1em; text-transform:uppercase">Lestari</span>
+            </div>
+          </div>
+
+          <!-- Stat chips — dark text on light background -->
+          <div style="display:flex; flex-direction:column; gap:8px; width:100%">
+            <div style="background:#F8F6F2; border:1px solid #E8E8E8; border-radius:10px; padding:10px 14px; display:flex; justify-content:space-between; align-items:center">
+              <span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; color:#4B4B4B">Sampah terdokumentasi</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700; color:#2D5A45">2.343 kg</span>
+            </div>
+            <div style="background:#F8F6F2; border:1px solid #E8E8E8; border-radius:10px; padding:10px 14px; display:flex; justify-content:space-between; align-items:center">
+              <span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; color:#4B4B4B">Riset terpublikasi SINTA</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700; color:#2D5A45">9</span>
+            </div>
+            <div style="background:#F8F6F2; border:1px solid #E8E8E8; border-radius:10px; padding:10px 14px; display:flex; justify-content:space-between; align-items:center">
+              <span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; color:#4B4B4B">Peserta River Cleanup luring</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700; color:#2D5A45">800+</span>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <!-- ROW 2: Hero photo — hover reveals green overlay + logo -->
+      <div class="hero-photo-wrapper" style="position:relative; border-radius:18px; overflow:hidden; aspect-ratio:21/11; background:#E8F2EC; cursor:pointer; opacity:1"
+        role="img" aria-label="Kegiatan River Cleanup SatuBumi di Sungai Citarum">
+        <img
+          src="assets/images/hero-river-cleanup.webp"
+          alt="Peserta program River Cleanup SatuBumi aktif membersihkan sampah di Sungai Citarum"
+          loading="eager"
+          fetchpriority="high"
+          width="1200" height="457"
+          style="width:100%; height:100%; object-fit:cover; display:block"
+          onerror="this.parentElement.style.background='linear-gradient(135deg,#1B3A2D,#2D5A45,#4A8C6E)'; this.style.display='none'"
+        />
+        <!-- Hover overlay: green tint + logo -->
+        <div class="hero-photo-overlay" style="position:absolute; inset:0; background:rgba(27,58,45,0.82); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px" aria-hidden="true">
+          <img src="assets/images/satubumi-logo.webp" alt="" style="max-width:140px; max-height:80px; object-fit:contain; filter:brightness(0) invert(1); opacity:0.9"
+            onerror="this.style.display='none'"/>
+          <div style="font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; color:white; letter-spacing:-0.01em">SatuBumi Lestari</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.75)">River Cleanup &middot; Sungai Citarum</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -225,7 +327,7 @@
        SECTION 3A: UNTUK KORPORASI
        ============================================================ -->
   <section id="korporasi" aria-labelledby="b2b-headline"
-    style="padding:96px 0; background:#FFFFFF; scroll-margin-top:80px">
+    style="padding:clamp(56px,8vh,96px) 0; background:#FFFFFF; scroll-margin-top:80px">
     <div class="container-main">
 
       <!-- Section header -->
@@ -266,9 +368,9 @@
 
           <!-- Document preview mockup -->
           <div style="display:flex; flex-direction:column; align-items:center; gap:16px">
-            <div class="doc-preview" role="img" aria-label="Contoh Impact Report SatuBumi — dokumen terstruktur siap pakai untuk sustainability report">
+            <div class="doc-preview" role="img" aria-label="Contoh laporan kegiatan SatuBumi, dokumen terstruktur siap pakai untuk pelaporan sustainability">
               <!-- Mock report interior -->
-              <div style="padding:32px 28px; background:#FFFFFF; min-height:420px; position:relative">
+              <div style="padding:32px 28px; background:#FFFFFF; min-height:clamp(320px,38vh,420px); position:relative">
                 <!-- Header mock -->
                 <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; padding-bottom:16px; border-bottom:2px solid #E8F2EC">
                   <div>
@@ -287,36 +389,36 @@
                   <div style="font-size:10px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:8px">Sampah Terkumpul (kg)</div>
                   <div style="display:flex; flex-direction:column; gap:6px">
                     <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Des</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:8%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">83</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px">
                       <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Jan</div>
-                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:70%"></div>
-                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">423</div>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:8px">
-                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Feb</div>
-                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:45%"></div>
-                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">287</div>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:8px">
-                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Mar</div>
-                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:85%"></div>
-                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">512</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:35%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">360</div>
                     </div>
                     <div style="display:flex; align-items:center; gap:8px">
                       <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Apr</div>
+                      <div style="height:10px; background:linear-gradient(to right,#F5A623,#e8940f); border-radius:2px; width:100%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">1.030</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Mei</div>
                       <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:60%"></div>
-                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">361</div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">624</div>
                     </div>
                   </div>
                 </div>
                 <!-- Summary stats -->
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:12px; background:#F8F6F2; border-radius:8px; margin-bottom:16px">
                   <div style="text-align:center">
-                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">1.583</div>
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">2.343</div>
                     <div style="font-size:9px; color:#4B4B4B; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Total kg</div>
                   </div>
                   <div style="text-align:center; border-left:1px solid #E8F2EC">
-                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">247</div>
-                    <div style="font-size:9px; color:#4B4B4B; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Peserta</div>
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">800+</div>
+                    <div style="font-size:9px; color:#4B4B4B; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Peserta luring</div>
                   </div>
                 </div>
                 <!-- Footer badge -->
@@ -326,11 +428,15 @@
                 </div>
               </div>
             </div>
-            <a href="#" target="_blank" rel="noopener noreferrer"
-              style="font-size:13px; color:#2D5A45; text-decoration:underline; font-family:'Plus Jakarta Sans',sans-serif; font-weight:500"
-              aria-label="Lihat contoh Impact Report SatuBumi dalam format PDF">
-              Lihat contoh Impact Report &rarr;
-            </a>
+            <div style="background:#F8F6F2; border-radius:10px; padding:14px 16px; font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; color:#4B4B4B; line-height:1.7; width:100%; max-width:340px">
+              <div style="font-weight:700; color:#1B3A2D; margin-bottom:6px; font-size:12px">Setiap laporan mencakup:</div>
+              <div style="display:flex; flex-direction:column; gap:4px">
+                <span>&#x2022; Data kg sampah per event &amp; per sesi</span>
+                <span>&#x2022; Koordinat GPS lokasi kegiatan</span>
+                <span>&#x2022; Jumlah &amp; daftar peserta terverifikasi</span>
+                <span>&#x2022; Metodologi berbasis 9 riset terindeks SINTA</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -448,7 +554,7 @@
        SECTION 3B: UNTUK KAMPUS & BEM
        ============================================================ -->
   <section id="kampus" aria-labelledby="b2c-headline"
-    style="padding:96px 0; background:#F8F6F2; scroll-margin-top:80px">
+    style="padding:clamp(56px,8vh,96px) 0; background:#F8F6F2; scroll-margin-top:80px">
     <div class="container-main">
 
       <!-- Section header -->
@@ -503,7 +609,7 @@
               </div>
               <div class="photo-overlay" aria-hidden="true">
                 <p style="padding:12px; font-size:11px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; margin:0">
-                  Group photo &middot; BEM Faperta
+                  Dokumentasi Peserta River Cleanup
                 </p>
               </div>
             </div>
@@ -520,7 +626,7 @@
               </div>
               <div class="photo-overlay" aria-hidden="true">
                 <p style="padding:12px; font-size:11px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; margin:0">
-                  Sertifikat di hari yang sama
+                  Sesi Sharing Interaktif
                 </p>
               </div>
             </div>
@@ -553,7 +659,7 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <p style="margin:0; font-size:15px; color:#1A1A1A; line-height:1.5">
-                <strong>Dokumentasi foto &amp; video</strong> profesional — siap untuk laporan kemahasiswaan dan media sosial
+                <strong>Dokumentasi foto &amp; video</strong> profesional, siap untuk laporan kemahasiswaan dan media sosial
               </p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px">
@@ -674,7 +780,7 @@
        SECTION 4: IMPACT NUMBERS FULL-WIDTH
        ============================================================ -->
   <section id="impact-numbers" aria-labelledby="impact-headline"
-    style="background:#1B3A2D; padding:80px 0">
+    style="background:#1B3A2D; padding:clamp(48px,7vh,80px) 0">
     <div class="container-main">
 
       <h2 id="impact-headline" class="section-reveal"
@@ -722,48 +828,137 @@
   <!-- ============================================================
        SECTION 5: KOLABORASI & REKAM JEJAK
        ============================================================ -->
-  <section aria-labelledby="rekam-jejak-headline"
-    style="padding:96px 0; background:#FFFFFF">
+  <section id="past-collab" aria-labelledby="past-collab-headline"
+    style="padding:clamp(56px,8vh,96px) 0; background:#FFFFFF">
     <div class="container-main">
 
-      <h2 id="rekam-jejak-headline" class="section-reveal"
+      <h2 id="past-collab-headline" class="section-reveal"
         style="font-size:clamp(26px,4vw,36px); font-weight:700; color:#1A1A1A; text-align:center; margin:0 0 12px">
-        Rekam Jejak Kegiatan
+        Our Past Collaboration
       </h2>
-      <p class="section-reveal" style="text-align:center; color:#666; margin:0 0 48px; font-size:15px; line-height:1.65">
-        Kami pernah berkolaborasi dengan institusi-institusi berikut dalam kegiatan River Cleanup di Sungai Citarum.
+      <p class="section-reveal" style="text-align:center; color:#666; margin:0 0 64px; font-size:15px; line-height:1.65">
+        Kami pernah berkolaborasi dengan institusi-institusi berikut dalam kegiatan SatuBumi Lestari.
       </p>
 
-      <!-- Kolaborator wall -->
-      <div class="section-reveal" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:56px">
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          National Geographic Indonesia
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          Waste4Change &amp; Haleon
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          SRE ITB
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          KKN UNPAD
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          CIMSA UNPAD
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          STP ARS University
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          Forum OSIS Bandung Barat
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          HPSN Bandung Barat
-        </span>
-        <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#E8F2EC; border-radius:9999px; font-size:13px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif">
-          Bening Saguling Foundation
-        </span>
+      <!--
+        LOGO FILES — tempatkan file logo di folder: assets/images/logos/
+        Format yang didukung: PNG, SVG, WebP, JPG
+        Nama file yang diharapkan (bisa Anda rename sesuai file yang dimiliki):
+          natgeo.png, waste4change.png, itb.png, unpad.png,
+          cimsa.png, ars.png, forum-osis.png, hpsn.png, bening-saguling.png
+      -->
+
+      <!-- Kolaborator grid with logos -->
+      <div class="section-reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:64px" id="collab-grid">
+
+        <!-- National Geographic Indonesia -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/natgeo.png" alt="National Geographic Indonesia"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">National Geographic Indonesia</span>
+        </div>
+
+        <!-- Waste4Change + Haleon -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/waste4change.png" alt="Waste4Change"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">Waste4Change &amp; Haleon</span>
+        </div>
+
+        <!-- SRE ITB -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/itb.png" alt="ITB"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">SRE ITB</span>
+        </div>
+
+        <!-- KKN UNPAD -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/unpad.png" alt="UNPAD"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">KKN UNPAD</span>
+        </div>
+
+        <!-- CIMSA UNPAD -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/cimsa.png" alt="CIMSA UNPAD"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">CIMSA UNPAD</span>
+        </div>
+
+        <!-- STP ARS University -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/ars.png" alt="ARS University"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">STP ARS University</span>
+        </div>
+
+        <!-- Forum OSIS Bandung Barat -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/forum-osis.png" alt="Forum OSIS Bandung Barat"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">Forum OSIS Bandung Barat</span>
+        </div>
+
+        <!-- HPSN Bandung Barat -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/hpsn.png" alt="HPSN Bandung Barat"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">HPSN Bandung Barat</span>
+        </div>
+
+        <!-- Bening Saguling Foundation -->
+        <div class="collab-card" style="display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:#FAFAFA; border:1px solid #E8E8E8; border-radius:14px; transition:box-shadow 200ms, transform 200ms; cursor:default; width:168px; flex-shrink:0"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.10)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="width:144px; height:112px; display:flex; align-items:center; justify-content:center; overflow:hidden">
+            <img src="assets/images/logos/bening-saguling.png" alt="Bening Saguling Foundation"
+              style="max-width:144px; max-height:112px; width:auto; height:auto; object-fit:contain"
+              onerror="this.style.display='none'" loading="lazy"/>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:#1A1A1A; text-align:center; line-height:1.35; font-family:'Plus Jakarta Sans',sans-serif">Bening Saguling Foundation</span>
+        </div>
+
       </div>
 
       <!-- Activity table -->
@@ -848,7 +1043,7 @@
        SECTION 6: FAQ ACCORDION
        ============================================================ -->
   <section aria-labelledby="faq-headline"
-    style="padding:96px 0; background:#F8F6F2">
+    style="padding:clamp(56px,8vh,96px) 0; background:#F8F6F2">
     <div class="container-main" style="max-width:760px">
 
       <h2 id="faq-headline" class="section-reveal"
@@ -873,7 +1068,7 @@
           </button>
           <div class="accordion-content">
             <div class="accordion-content-inner">
-              Laporan kegiatan SatuBumi menyediakan data terstruktur yang dapat dijadikan referensi pendukung dalam pelaporan sustainability — mencakup data kuantitatif volume sampah per event (dalam kg), metodologi yang sudah terpublikasi dalam 9 penelitian terindeks SINTA, koordinat lokasi, dan jumlah peserta. Kesesuaian dengan standar pelaporan spesifik perusahaan Anda sebaiknya dikonsultasikan dengan tim sustainability internal atau auditor Anda.
+              Laporan kegiatan SatuBumi menyediakan data terstruktur yang dapat dijadikan referensi pendukung dalam pelaporan sustainability. Data mencakup volume sampah per event (dalam kg), metodologi yang sudah terpublikasi dalam 9 penelitian terindeks SINTA, koordinat lokasi, dan jumlah peserta. Kesesuaian dengan standar pelaporan spesifik perusahaan Anda sebaiknya dikonsultasikan dengan tim sustainability internal atau auditor Anda.
             </div>
           </div>
         </div>
@@ -885,7 +1080,7 @@
           </button>
           <div class="accordion-content">
             <div class="accordion-content-inner">
-              Setelah event, SatuBumi menyiapkan laporan kegiatan yang mencakup data sampah terkumpul (dalam kg per sesi), jumlah peserta, dokumentasi foto, dan rekap aktivitas. Waktu penyerahan dan format laporan dapat disesuaikan dengan kebutuhan Anda — diskusikan di tahap perencanaan awal agar timeline sesuai.
+              Setelah event, SatuBumi menyiapkan laporan kegiatan yang mencakup data sampah terkumpul (dalam kg per sesi), jumlah peserta, dokumentasi foto, dan rekap aktivitas. Waktu penyerahan dan format laporan dapat disesuaikan dengan kebutuhan Anda. Diskusikan di tahap perencanaan awal agar timeline sesuai.
             </div>
           </div>
         </div>
@@ -937,12 +1132,12 @@
 
         <div class="accordion-item" id="faq-6">
           <button class="accordion-trigger" tabindex="0">
-            <span>Bisa bantu buatkan template proposal untuk rektorat?</span>
+            <span>Apakah kami harus menyiapkan semua alat kebersihan dan memikirkan pembuangan sampahnya sendiri?</span>
             <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="accordion-content">
             <div class="accordion-content-inner">
-              Ya, ini sudah termasuk dalam paket kami untuk semua klien kampus. Template proposal mencakup: latar belakang kegiatan, tujuan dan manfaat akademis, susunan kegiatan, anggaran rinci, dan lampiran kredensial SatuBumi (publikasi SINTA, sertifikat kemitraan). Template dapat langsung Anda sesuaikan dengan format pengajuan di kampus masing-masing. Biasanya selesai dalam 30 menit setelah form diisi.
+              Sama sekali tidak. Panitia cukup fokus membawa peserta dan mengatur rundown internal. Seluruh kebutuhan teknis di lapangan mulai dari alat capit, sarung tangan, karung, perizinan lokasi, safety briefing, hingga pengangkutan sampah pasca-kegiatan sudah di-handle sepenuhnya oleh tim SatuBumi. Anda tidak perlu pusing mengurus logistik kotornya.
             </div>
           </div>
         </div>
@@ -954,8 +1149,8 @@
   <!-- ============================================================
        SECTION 7: FINAL CTA
        ============================================================ -->
-  <section aria-labelledby="final-cta-headline"
-    style="padding:96px 0; background:#FFFFFF; text-align:center">
+  <section id="kontak" aria-labelledby="final-cta-headline"
+    style="padding:clamp(56px,8vh,96px) 0; background:#FFFFFF; text-align:center">
     <div class="container-main" style="max-width:640px">
 
       <h2 id="final-cta-headline" class="section-reveal"
@@ -963,7 +1158,7 @@
         Bergabung dengan Program River Cleanup SatuBumi.
       </h2>
       <p class="section-reveal" style="font-size:16px; color:#4B4B4B; margin:0 0 40px; line-height:1.65">
-        Kampus, sekolah, atau korporasi — kami siapkan program yang sesuai kebutuhan Anda.
+        Kampus, sekolah, atau korporasi. Kami siapkan program yang sesuai kebutuhan Anda.
       </p>
 
       <div class="section-reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-bottom:32px">
@@ -979,9 +1174,9 @@
         <p style="font-size:14px; color:#666; display:flex; align-items:center; justify-content:center; gap:8px; margin:0; flex-wrap:wrap">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Atau langsung chat:
-          <a href="https://wa.me/628xxxxxxxxx" style="color:#1B3A2D; font-weight:600; text-decoration:none"
+          <a href="https://wa.me/62818856993" style="color:#1B3A2D; font-weight:600; text-decoration:none"
             aria-label="Chat WhatsApp SatuBumi" target="_blank" rel="noopener noreferrer">
-            wa.me/628xxxxxxxxx
+            wa.me/62818856993
           </a>
         </p>
       </div>
@@ -1000,11 +1195,15 @@
 
         <!-- Col 1: Brand -->
         <div>
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
-            <div style="width:36px; height:36px; background:linear-gradient(135deg,#4A8C6E,#F5A623); border-radius:8px; display:flex; align-items:center; justify-content:center" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <span style="font-family:'DM Serif Display',serif; font-size:20px; font-weight:700; color:#F8F6F2">SatuBumi</span>
+          <div style="display:flex; align-items:center; margin-bottom:12px">
+            <img
+              src="assets/images/satubumi-logo.webp"
+              alt="SatuBumi Lestari"
+              loading="lazy"
+              style="height:36px; width:auto; object-fit:contain; display:block; filter:brightness(0) invert(1)"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"
+            />
+            <span style="display:none; font-family:'DM Serif Display',serif; font-size:20px; font-weight:700; color:#F8F6F2">SatuBumi</span>
           </div>
           <p style="font-size:13px; color:#B2D8C5; margin:0; line-height:1.6; max-width:260px">
             Program edukasi lingkungan berbasis riset. Berdiri 2021, beroperasi di Sungai Citarum.
@@ -1029,7 +1228,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               hello@satubumi.id
             </a>
-            <a href="https://wa.me/628xxxxxxxxx" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/62818856993" target="_blank" rel="noopener noreferrer"
               style="display:flex; align-items:center; gap:8px; color:#B2D8C5; text-decoration:none; font-size:14px"
               aria-label="WhatsApp SatuBumi">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1068,6 +1267,15 @@
        JS — deferred, non-blocking
        ============================================================ -->
   <script>
+    // Header scroll shadow
+    (function () {
+      var header = document.getElementById('site-header');
+      if (!header) return;
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    })();
+
     // Initialize trust bar (clone template for marquee)
     (function () {
       var tpl = document.getElementById('trust-items-tpl');
@@ -1097,6 +1305,12 @@
             el.style.gridTemplateColumns = isTwoCol ? '1fr 1fr' : '1fr';
           }
         });
+
+        // Hero top grid: 2 cols on desktop
+        var heroTopGrid = document.getElementById('hero-top-grid');
+        if (heroTopGrid) {
+          heroTopGrid.style.gridTemplateColumns = window.innerWidth >= 1024 ? '1fr 1fr' : '1fr';
+        }
 
         // Impact numbers: 3 cols on desktop, 2 on mobile
         var impactGrid = document.getElementById('impact-grid');

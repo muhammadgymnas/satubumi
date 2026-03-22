@@ -200,7 +200,7 @@
     if (!msg && (name === 'phone' || name === 'phone_b2c') && val) {
       // Basic Indonesian phone validation
       if (!/^(\+62|62|08)[0-9]{7,12}$/.test(val.replace(/\s/g, ''))) {
-        msg = 'Nomor WhatsApp tidak valid — pastikan diawali 08 atau +62.';
+        msg = 'Nomor WhatsApp tidak valid. Pastikan diawali 08 atau +62.';
       }
     }
 
@@ -281,7 +281,7 @@
   function showSuccess(form, successEl, name, phone, isB2c) {
     var firstName = name.split(' ')[0] || name;
     var timeText = isB2c ? '2 jam' : '24 jam';
-    var waNumber = '628xxxxxxxxx'; // replace with real number
+    var waNumber = '62818856993';
 
     form.style.display = 'none';
     successEl.classList.add('visible');

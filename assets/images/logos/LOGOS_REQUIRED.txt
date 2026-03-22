@@ -1,0 +1,25 @@
+Letakkan file logo institusi kolaborator di folder ini.
+
+Format yang didukung: PNG, SVG, WebP, JPG
+Ukuran ideal: lebar 160px, tinggi 80px, transparan (PNG/SVG lebih baik)
+
+Nama file yang diharapkan (sesuaikan dengan nama di index.html):
+
+  natgeo.png           — National Geographic Indonesia
+  waste4change.png     — Waste4Change & Haleon
+  itb.png              — SRE ITB (logo ITB atau SRE ITB)
+  unpad.png            — KKN UNPAD (logo UNPAD)
+  cimsa.png            — CIMSA UNPAD
+  ars.png              — STP ARS University (logo ARS University)
+  forum-osis.png       — Forum OSIS Bandung Barat
+  hpsn.png             — HPSN Bandung Barat
+  bening-saguling.png  — Bening Saguling Foundation
+
+Jika nama file berbeda, ubah atribut src pada <img> di index.html bagian "Our Past Collaboration".
+
+=====================================================================
+LOGO UTAMA SATUBUMI
+Tempatkan di: assets/images/satubumi-logo.webp
+Digunakan di: Hero section (panel kanan) dan hover overlay foto hero
+Ukuran ideal: max 360x240px, format WebP, transparan atau background putih
+=====================================================================
