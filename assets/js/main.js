@@ -287,7 +287,9 @@
     successEl.classList.add('visible');
     successEl.querySelector('.success-name').textContent = firstName;
     successEl.querySelector('.success-phone').textContent = phone;
-    successEl.querySelector('.success-time').textContent = timeText;
+    if (successEl.querySelector('.success-time')) {
+      successEl.querySelector('.success-time').textContent = timeText;
+    }
     successEl.querySelector('.btn-wa').href = 'https://wa.me/' + waNumber;
   }
 
