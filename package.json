@@ -1,0 +1,13 @@
+{
+  "name": "satubumi-landing",
+  "version": "1.0.0",
+  "description": "SatuBumi Landing Page — Research-Backed ESG Education Partner",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
+    "deploy": "npm run build && npx wrangler pages deploy . --project-name=satubumi"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

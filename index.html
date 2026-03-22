@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SatuBumi — Program ESG berbasis riset terindeks SINTA. Impact Report siap pakai untuk sustainability report korporasi sesuai POJK 51/2017. Dipercaya 50+ institusi Indonesia." />
+  <meta name="theme-color" content="#1B3A2D" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SatuBumi — Program ESG yang Bisa Masuk Sustainability Report Anda" />
+  <meta property="og:description" content="Berbasis 9 riset terindeks SINTA. Dampak terukur per kilogram. Siap digunakan sebagai bukti pelaporan POJK 51/2017." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/og-image.jpg" />
+
+  <title>SatuBumi — Research-Backed ESG Education Partner</title>
+
+  <!-- Preconnect to Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts: subset Latin + Latin-ext only for performance -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+  </noscript>
+
+  <!-- Critical CSS inlined -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+    body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1A1A1A;background:#fff;line-height:1.65;font-size:17px;overflow-x:hidden;margin:0}
+    h1,h2{font-family:'DM Serif Display',Georgia,serif;letter-spacing:-0.02em}
+    img{max-width:100%;height:auto;display:block}
+    :focus-visible{outline:2px solid #2D5A45;outline-offset:3px;border-radius:4px}
+    .hero-anim{opacity:0}
+    .hero-img-anim{opacity:0}
+
+    /* Inline critical section reveal so there's no flash */
+    .section-reveal{opacity:0;transform:translateY(20px);transition:opacity 500ms ease,transform 500ms ease}
+    .section-reveal.revealed{opacity:1;transform:translateY(0)}
+
+    /* Prevent FOUC on font load */
+    .container-main{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}
+
+    @keyframes slideUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  </style>
+
+  <!-- Tailwind output (built CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       STICKY BOTTOM NAV — Mobile-first dual CTA
+       ============================================================ -->
+  <nav id="sticky-nav" class="sticky-nav" role="navigation" aria-label="Quick navigation">
+    <a href="#korporasi" class="sticky-nav-btn" style="background:#2D5A45" aria-label="Untuk Korporasi CSR">
+      Untuk Korporasi
+    </a>
+    <div class="sticky-nav-divider" aria-hidden="true"></div>
+    <a href="#kampus" class="sticky-nav-btn" style="background:#0D7377" aria-label="Untuk Kampus dan BEM">
+      Untuk Kampus
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       SECTION 1: HERO
+       ============================================================ -->
+  <section id="hero" aria-labelledby="hero-headline"
+    style="background:#FFFFFF; padding: 96px 0 0; min-height: 100svh; display:flex; align-items:center; overflow:hidden">
+    <div class="container-main">
+      <div style="display:grid; grid-template-columns:1fr; gap:48px; align-items:center">
+
+        <!-- TEXT COLUMN -->
+        <div style="max-width:640px">
+
+          <!-- Trust badge -->
+          <div class="hero-anim" data-delay="0" style="margin-bottom:20px">
+            <span class="trust-badge" role="text">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Dipercaya 50+ Institusi &amp; Korporasi Indonesia
+            </span>
+          </div>
+
+          <!-- Headline H1 -->
+          <h1 id="hero-headline" class="hero-anim" data-delay="100"
+            style="font-size:clamp(28px,5vw,52px); font-weight:700; color:#1A1A1A; margin:0 0 20px; max-width:580px; line-height:1.1">
+            Program ESG yang Bisa Masuk&nbsp;<em style="font-style:italic; color:#2D5A45">Sustainability Report</em>&nbsp;Anda.
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="hero-anim" data-delay="200"
+            style="font-size:clamp(15px,2vw,17px); color:#4B4B4B; margin:0 0 32px; max-width:500px; line-height:1.65">
+            Berbasis 9 riset terindeks SINTA. Dampak terukur per kilogram. Siap digunakan sebagai bukti pelaporan <strong>POJK 51/2017</strong>.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-anim" data-delay="300"
+            style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:16px">
+            <a href="#korporasi" class="btn-primary-b2b" aria-label="Lihat program untuk Korporasi CSR">
+              Untuk Korporasi CSR &rarr;
+            </a>
+            <a href="#kampus" class="btn-outline-b2c" aria-label="Lihat program untuk Kampus dan BEM">
+              Untuk Kampus &amp; BEM &rarr;
+            </a>
+          </div>
+
+          <!-- Micro copy -->
+          <p class="hero-anim" data-delay="350"
+            style="font-size:12px; color:#666; margin:0; font-family:'Plus Jakarta Sans',sans-serif">
+            Respons dalam 24 jam untuk korporasi &middot; 2 jam untuk kampus
+          </p>
+        </div>
+
+        <!-- IMAGE COLUMN -->
+        <div class="hero-img-anim"
+          style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:16/9; background:#E8F2EC"
+          role="img" aria-label="Kegiatan River Cleanup SatuBumi — peserta aktif membersihkan sungai Citarum">
+          <!-- Placeholder SVG — replace src with actual WebP photo -->
+          <img
+            src="assets/images/hero-river-cleanup.webp"
+            alt="Peserta program River Cleanup SatuBumi aktif membersihkan sampah di Sungai Citarum dengan antusias"
+            loading="eager"
+            fetchpriority="high"
+            width="800" height="450"
+            style="width:100%; height:100%; object-fit:cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+          />
+          <!-- Fallback placeholder -->
+          <div style="display:none; position:absolute; inset:0; background:linear-gradient(135deg,#1B3A2D,#2D5A45,#4A8C6E); align-items:center; justify-content:center; flex-direction:column; gap:12px">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#B2D8C5" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p style="color:#B2D8C5; font-size:13px; margin:0; font-family:'Plus Jakarta Sans',sans-serif; text-align:center; max-width:200px">
+              Foto River Cleanup<br/>Sungai Citarum
+            </p>
+          </div>
+          <!-- Gradient overlay (desktop) -->
+          <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(26,26,26,0.15) 0%, transparent 50%)" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: TRUST BAR
+       ============================================================ -->
+  <section aria-label="Statistik dampak SatuBumi"
+    style="background:#F8F6F2; padding:20px 0; overflow:hidden; border-top:1px solid #E8E8E8; border-bottom:1px solid #E8E8E8">
+
+    <!-- Desktop: horizontal row, centered -->
+    <div class="container-main" style="display:none" id="trust-bar-desktop">
+      <div style="display:flex; align-items:center; justify-content:center; gap:0; flex-wrap:wrap">
+        <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#1B3A2D; padding:0 20px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          9 Publikasi SINTA
+        </span>
+        <span style="color:#4A8C6E; font-size:16px; line-height:1" aria-hidden="true">&middot;</span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#1B3A2D; padding:0 20px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          2.343 kg Terverifikasi
+        </span>
+        <span style="color:#4A8C6E; font-size:16px; line-height:1" aria-hidden="true">&middot;</span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#1B3A2D; padding:0 20px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          1.800+ Peserta
+        </span>
+        <span style="color:#4A8C6E; font-size:16px; line-height:1" aria-hidden="true">&middot;</span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#1B3A2D; padding:0 20px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          50+ Klien
+        </span>
+        <span style="color:#4A8C6E; font-size:16px; line-height:1" aria-hidden="true">&middot;</span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:#1B3A2D; padding:0 20px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          National Geographic Partner
+        </span>
+      </div>
+    </div>
+
+    <!-- Mobile: CSS marquee -->
+    <div id="trust-bar-mobile" style="overflow:hidden; white-space:nowrap">
+      <div style="display:inline-flex; animation:marquee 30s linear infinite">
+        <!-- Two copies for seamless loop -->
+        <template id="trust-items-tpl">
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#1B3A2D; padding:0 20px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            9 Publikasi SINTA
+          </span>
+          <span style="color:#4A8C6E; padding:0 4px" aria-hidden="true">&middot;</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#1B3A2D; padding:0 20px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            2.343 kg Terverifikasi
+          </span>
+          <span style="color:#4A8C6E; padding:0 4px" aria-hidden="true">&middot;</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#1B3A2D; padding:0 20px">
+            1.800+ Peserta
+          </span>
+          <span style="color:#4A8C6E; padding:0 4px" aria-hidden="true">&middot;</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#1B3A2D; padding:0 20px">
+            50+ Klien
+          </span>
+          <span style="color:#4A8C6E; padding:0 4px" aria-hidden="true">&middot;</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:#1B3A2D; padding:0 20px">
+            National Geographic Partner
+          </span>
+          <span style="color:#4A8C6E; padding:0 4px" aria-hidden="true">&middot;</span>
+        </template>
+        <span id="trust-track-1"></span>
+        <span id="trust-track-2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3A: UNTUK KORPORASI
+       ============================================================ -->
+  <section id="korporasi" aria-labelledby="b2b-headline"
+    style="padding:96px 0; background:#FFFFFF; scroll-margin-top:80px">
+    <div class="container-main">
+
+      <!-- Section header -->
+      <div class="section-heading-b2b section-reveal" style="margin-bottom:48px; max-width:520px">
+        <span class="section-chip chip-b2b">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Untuk Korporasi &amp; Instansi
+        </span>
+        <h2 id="b2b-headline" style="font-size:clamp(26px,4vw,36px); font-weight:700; color:#1A1A1A; margin:0 0 16px; line-height:1.2">
+          Impact Report yang Bisa Langsung Masuk Laporan Keberlanjutan Anda.
+        </h2>
+        <p style="font-size:clamp(15px,2vw,17px); color:#4B4B4B; margin:0; line-height:1.65; max-width:500px">
+          Sebagian besar program CSR lingkungan tidak menghasilkan data yang dapat dipertanggungjawabkan ke OJK. SatuBumi mengubah setiap River Cleanup menjadi impact report dengan metodologi yang sudah terverifikasi dalam 9 publikasi riset terindeks SINTA — data yang bisa langsung Anda masukkan ke kolom Environment sustainability report.
+        </p>
+      </div>
+
+      <!-- 2-column: Content + Form -->
+      <div style="display:grid; grid-template-columns:1fr; gap:48px; align-items:start" id="b2b-grid">
+
+        <!-- LEFT: metrics + doc preview -->
+        <div class="section-reveal">
+
+          <!-- 3 Metric cells -->
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:40px">
+            <div class="metric-cell">
+              <span class="metric-number" aria-label="2.343 kilogram sampah terdokumentasi">2.343</span>
+              <span class="metric-label">kg sampah terdokumentasi</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-number" aria-label="9 publikasi riset terindeks SINTA">9</span>
+              <span class="metric-label">Publikasi riset terindeks SINTA</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-number" aria-label="50 plus klien korporasi dan institusi">50+</span>
+              <span class="metric-label">Klien korporasi &amp; institusi</span>
+            </div>
+          </div>
+
+          <!-- Document preview mockup -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:16px">
+            <div class="doc-preview" role="img" aria-label="Contoh Impact Report SatuBumi — dokumen terstruktur siap pakai untuk sustainability report">
+              <!-- Mock report interior -->
+              <div style="padding:32px 28px; background:#FFFFFF; min-height:420px; position:relative">
+                <!-- Header mock -->
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; padding-bottom:16px; border-bottom:2px solid #E8F2EC">
+                  <div>
+                    <div style="font-family:'DM Serif Display',serif; font-size:13px; font-weight:700; color:#1B3A2D; letter-spacing:-0.01em">SatuBumi Lestari</div>
+                    <div style="font-size:10px; color:#4A8C6E; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Research-Backed ESG Partner</div>
+                  </div>
+                  <div style="width:32px; height:32px; background:linear-gradient(135deg,#2D5A45,#4A8C6E); border-radius:6px; display:flex; align-items:center; justify-content:center">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </div>
+                </div>
+                <!-- Report title -->
+                <div style="font-family:'DM Serif Display',serif; font-size:16px; font-weight:700; color:#1B3A2D; margin-bottom:4px">Impact Report</div>
+                <div style="font-size:11px; color:#666; font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:20px">River Cleanup Program 2025</div>
+                <!-- Mini bar chart -->
+                <div style="margin-bottom:20px">
+                  <div style="font-size:10px; font-weight:600; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:8px">Sampah Terkumpul (kg)</div>
+                  <div style="display:flex; flex-direction:column; gap:6px">
+                    <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Jan</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:70%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">423</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Feb</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:45%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">287</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Mar</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:85%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">512</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px">
+                      <div style="font-size:9px; width:32px; color:#666; font-family:'IBM Plex Mono',monospace">Apr</div>
+                      <div style="height:10px; background:linear-gradient(to right,#2D5A45,#4A8C6E); border-radius:2px; width:60%"></div>
+                      <div style="font-size:9px; color:#F5A623; font-family:'IBM Plex Mono',monospace; font-weight:700">361</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Summary stats -->
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:12px; background:#F8F6F2; border-radius:8px; margin-bottom:16px">
+                  <div style="text-align:center">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">1.583</div>
+                    <div style="font-size:9px; color:#4B4B4B; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Total kg</div>
+                  </div>
+                  <div style="text-align:center; border-left:1px solid #E8F2EC">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:700; color:#F5A623">247</div>
+                    <div style="font-size:9px; color:#4B4B4B; font-family:'Plus Jakarta Sans',sans-serif; margin-top:2px">Peserta</div>
+                  </div>
+                </div>
+                <!-- Footer badge -->
+                <div style="display:flex; align-items:center; gap:6px; padding:8px 10px; background:#E8F2EC; border-radius:6px">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D5A45" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span style="font-size:9px; color:#1B3A2D; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600">Terverifikasi — 9 SINTA Publications</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              style="font-size:13px; color:#2D5A45; text-decoration:underline; font-family:'Plus Jakarta Sans',sans-serif; font-weight:500"
+              aria-label="Lihat contoh Impact Report SatuBumi dalam format PDF">
+              Lihat contoh Impact Report &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form B2B -->
+        <div class="section-reveal">
+          <div style="background:#E8F2EC; border-radius:16px; padding:32px; box-shadow:0 8px 32px rgba(0,0,0,0.10); position:relative">
+
+            <form id="form-b2b" novalidate data-endpoint="#"
+              aria-label="Formulir kontak untuk korporasi dan instansi">
+              <h3 style="font-size:18px; font-weight:700; color:#1B3A2D; margin:0 0 24px; font-family:'Plus Jakarta Sans',sans-serif">
+                Dapatkan Portofolio &amp; Impact Report Sample
+              </h3>
+
+              <div style="display:flex; flex-direction:column; gap:16px">
+
+                <!-- Nama & Perusahaan -->
+                <div class="form-group">
+                  <label class="form-label" for="b2b-name">Nama &amp; Perusahaan</label>
+                  <input class="form-input" type="text" id="b2b-name" name="name" required
+                    placeholder="Nama Anda, PT Nama Perusahaan"
+                    autocomplete="organization"
+                    aria-describedby="b2b-name-error" />
+                  <span class="form-error-msg" id="b2b-name-error" role="alert"></span>
+                </div>
+
+                <!-- Jabatan -->
+                <div class="form-group">
+                  <label class="form-label" for="b2b-position">Jabatan</label>
+                  <input class="form-input" type="text" id="b2b-position" name="position" required
+                    placeholder="CSR Manager, Sustainability Officer, dll"
+                    autocomplete="organization-title"
+                    aria-describedby="b2b-position-error" />
+                  <span class="form-error-msg" id="b2b-position-error" role="alert"></span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="form-group">
+                  <label class="form-label" for="b2b-phone">Nomor WhatsApp</label>
+                  <input class="form-input" type="tel" id="b2b-phone" name="phone" required
+                    placeholder="08xxxxxxxxxx"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    aria-describedby="b2b-phone-error" />
+                  <span class="form-error-msg" id="b2b-phone-error" role="alert"></span>
+                </div>
+
+                <!-- Estimasi peserta -->
+                <div class="form-group">
+                  <label class="form-label" for="b2b-participants">Estimasi Jumlah Peserta</label>
+                  <select class="form-input form-select" id="b2b-participants" name="participants" required
+                    aria-describedby="b2b-participants-error">
+                    <option value="" disabled selected>Pilih estimasi peserta</option>
+                    <option value="lt50">&lt; 50 orang</option>
+                    <option value="50-100">50–100 orang</option>
+                    <option value="100-200">100–200 orang</option>
+                    <option value="gt200">&gt; 200 orang</option>
+                  </select>
+                  <span class="form-error-msg" id="b2b-participants-error" role="alert"></span>
+                </div>
+
+                <!-- Checkbox Impact Report -->
+                <div style="display:flex; align-items:flex-start; gap:10px; padding:12px 0">
+                  <input type="checkbox" id="b2b-need-report" name="need_report" value="yes"
+                    checked style="margin-top:3px; accent-color:#2D5A45; width:16px; height:16px; flex-shrink:0; cursor:pointer" />
+                  <label for="b2b-need-report"
+                    style="font-size:14px; color:#1B3A2D; cursor:pointer; line-height:1.5; font-family:'Plus Jakarta Sans',sans-serif">
+                    Saya membutuhkan Impact Report untuk sustainability report perusahaan
+                  </label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-primary-b2b btn-full"
+                  style="margin-top:4px; position:relative">
+                  Dapatkan Portofolio &amp; Impact Report Sample
+                </button>
+
+                <!-- Expectation setter -->
+                <p style="font-size:12px; color:#4B4B4B; text-align:center; margin:0; display:flex; align-items:center; justify-content:center; gap:6px; font-family:'Plus Jakarta Sans',sans-serif">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A8C6E" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Tim kami akan menghubungi dalam 24 jam
+                </p>
+
+              </div>
+            </form>
+
+            <!-- Success state -->
+            <div id="success-b2b" class="success-state" role="status" aria-live="polite">
+              <div class="check-circle">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D5A45" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  style="stroke-dasharray:100; stroke-dashoffset:100; animation:draw 600ms ease forwards">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h3 style="font-size:20px; font-weight:700; color:#1B3A2D; margin:0; font-family:'DM Serif Display',serif">
+                Terima kasih, <span class="success-name"></span>!
+              </h3>
+              <p style="font-size:15px; color:#4B4B4B; margin:0; text-align:center; line-height:1.65">
+                Kami akan menghubungi Anda di <strong class="success-phone"></strong> dalam <strong class="success-time"></strong> dengan portofolio dan contoh Impact Report.
+              </p>
+              <a href="#" class="btn-wa" aria-label="Chat WhatsApp langsung dengan tim SatuBumi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat WhatsApp Sekarang
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /b2b-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3B: UNTUK KAMPUS & BEM
+       ============================================================ -->
+  <section id="kampus" aria-labelledby="b2c-headline"
+    style="padding:96px 0; background:#F8F6F2; scroll-margin-top:80px">
+    <div class="container-main">
+
+      <!-- Section header -->
+      <div class="section-heading-b2c section-reveal" style="margin-bottom:48px; max-width:520px">
+        <span class="section-chip chip-b2c">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Untuk Kampus &amp; BEM
+        </span>
+        <h2 id="b2c-headline" style="font-size:clamp(26px,4vw,36px); font-weight:700; color:#1A1A1A; margin:0 0 16px; line-height:1.2">
+          Kegiatan Lingkungan yang Seru, Berbobot, dan Ada Sertifikatnya.
+        </h2>
+        <p style="font-size:clamp(15px,2vw,17px); color:#4B4B4B; margin:0; line-height:1.65; max-width:520px">
+          Cari kegiatan sosial-lingkungan yang bisa dipertanggungjawabkan ke kemahasiswaan, punya sertifikat untuk peserta, dan dokumentasinya instagrammable? River Cleanup SatuBumi sudah dilakukan oleh 50+ kampus — dari Unpad, ITB, sampai kampus swasta di Bandung dan Jabodetabek.
+        </p>
+      </div>
+
+      <!-- 2-column: Content + Form -->
+      <div style="display:grid; grid-template-columns:1fr; gap:48px; align-items:start" id="b2c-grid">
+
+        <!-- LEFT: Photo grid + campus logos -->
+        <div class="section-reveal">
+
+          <!-- Photo grid 3-col -->
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:32px" role="list" aria-label="Galeri kegiatan River Cleanup di kampus">
+
+            <!-- Photo 1 -->
+            <div class="photo-item" role="listitem">
+              <img src="assets/images/photo-cleanup-1.webp"
+                alt="Mahasiswa aktif memungut sampah di pinggir sungai dalam program River Cleanup SatuBumi"
+                loading="lazy" width="300" height="300"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div style="display:none; position:absolute; inset:0; background:linear-gradient(135deg,#0D7377,#14A8AC); align-items:center; justify-content:center">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="photo-overlay" aria-hidden="true">
+                <p style="padding:12px; font-size:11px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; margin:0">
+                  Aksi bersih sungai &middot; 200 peserta
+                </p>
+              </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-item" role="listitem">
+              <img src="assets/images/photo-cleanup-2.webp"
+                alt="Group photo peserta River Cleanup SatuBumi dari BEM Fakultas, semua tersenyum bersama"
+                loading="lazy" width="300" height="300"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div style="display:none; position:absolute; inset:0; background:linear-gradient(135deg,#14A8AC,#0D7377); align-items:center; justify-content:center">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+              </div>
+              <div class="photo-overlay" aria-hidden="true">
+                <p style="padding:12px; font-size:11px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; margin:0">
+                  Group photo &middot; BEM Faperta
+                </p>
+              </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-item" role="listitem">
+              <img src="assets/images/photo-cleanup-3.webp"
+                alt="Momen penyerahan sertifikat kepada peserta River Cleanup di hari yang sama dengan kegiatan"
+                loading="lazy" width="300" height="300"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div style="display:none; position:absolute; inset:0; background:linear-gradient(135deg,#0D7377,#1B3A2D); align-items:center; justify-content:center">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="photo-overlay" aria-hidden="true">
+                <p style="padding:12px; font-size:11px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; margin:0">
+                  Sertifikat di hari yang sama
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campus logos / names -->
+          <div style="padding:20px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0; margin-bottom:32px">
+            <p style="font-size:12px; color:#666; text-align:center; margin:0; font-family:'Plus Jakarta Sans',sans-serif">
+              Dipercaya mahasiswa dari
+              <strong style="color:#1B3A2D">Unpad</strong>&nbsp;&middot;&nbsp;
+              <strong style="color:#1B3A2D">ITB</strong>&nbsp;&middot;&nbsp;
+              <strong style="color:#1B3A2D">ARS University</strong>&nbsp;&middot;&nbsp;
+              <strong style="color:#1B3A2D">UNPAS</strong>&nbsp;&middot;&nbsp;
+              <strong style="color:#1B3A2D">UIN Bandung</strong>&nbsp;&middot;&nbsp;
+              <strong style="color:#1B3A2D">dan 45+ kampus lainnya</strong>
+            </p>
+          </div>
+
+          <!-- What they get -->
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <div style="display:flex; align-items:flex-start; gap:12px">
+              <div style="width:24px; height:24px; background:#E6F7F8; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <p style="margin:0; font-size:15px; color:#1A1A1A; line-height:1.5">
+                <strong>Sertifikat digital</strong> untuk setiap peserta, diterbitkan di hari yang sama
+              </p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px">
+              <div style="width:24px; height:24px; background:#E6F7F8; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <p style="margin:0; font-size:15px; color:#1A1A1A; line-height:1.5">
+                <strong>Dokumentasi foto &amp; video</strong> profesional — siap untuk laporan kemahasiswaan dan media sosial
+              </p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px">
+              <div style="width:24px; height:24px; background:#E6F7F8; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <p style="margin:0; font-size:15px; color:#1A1A1A; line-height:1.5">
+                <strong>Template proposal</strong> siap pakai untuk pengajuan ke rektorat dan kemahasiswaan
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form B2C -->
+        <div class="section-reveal">
+          <div style="background:#E6F7F8; border-radius:16px; padding:32px; box-shadow:0 8px 32px rgba(0,0,0,0.10)">
+
+            <form id="form-b2c" novalidate data-endpoint="#"
+              aria-label="Formulir kontak untuk kampus dan BEM">
+              <h3 style="font-size:18px; font-weight:700; color:#0D7377; margin:0 0 24px; font-family:'Plus Jakarta Sans',sans-serif">
+                Dapatkan Penawaran &amp; Template Proposal
+              </h3>
+
+              <div style="display:flex; flex-direction:column; gap:16px">
+
+                <!-- Nama & Kampus -->
+                <div class="form-group">
+                  <label class="form-label-b2c" for="b2c-name">Nama &amp; Kampus</label>
+                  <input class="form-input form-input-b2c" type="text" id="b2c-name" name="name_b2c" required
+                    placeholder="Nama Anda, Universitas / Kampus"
+                    autocomplete="name"
+                    aria-describedby="b2c-name-error" />
+                  <span class="form-error-msg" id="b2c-name-error" role="alert"></span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="form-group">
+                  <label class="form-label-b2c" for="b2c-phone">Nomor WhatsApp</label>
+                  <input class="form-input form-input-b2c" type="tel" id="b2c-phone" name="phone_b2c" required
+                    placeholder="08xxxxxxxxxx"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    aria-describedby="b2c-phone-error" />
+                  <span class="form-error-msg" id="b2c-phone-error" role="alert"></span>
+                </div>
+
+                <!-- Estimasi peserta -->
+                <div class="form-group">
+                  <label class="form-label-b2c" for="b2c-participants">Estimasi Peserta</label>
+                  <select class="form-input form-input-b2c form-select" id="b2c-participants" name="participants_b2c"
+                    required aria-describedby="b2c-participants-error">
+                    <option value="" disabled selected>Pilih estimasi peserta</option>
+                    <option value="lt50">&lt; 50 orang</option>
+                    <option value="50-100">50–100 orang</option>
+                    <option value="100-200">100–200 orang</option>
+                    <option value="gt200">&gt; 200 orang</option>
+                  </select>
+                  <span class="form-error-msg" id="b2c-participants-error" role="alert"></span>
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group">
+                  <label class="form-label-b2c" for="b2c-budget">Budget Estimasi</label>
+                  <select class="form-input form-input-b2c form-select" id="b2c-budget" name="budget_b2c"
+                    required aria-describedby="b2c-budget-error">
+                    <option value="" disabled selected>Pilih range budget</option>
+                    <option value="lt5jt">&lt; Rp5 juta</option>
+                    <option value="5-10jt">Rp5–10 juta</option>
+                    <option value="10-20jt">Rp10–20 juta</option>
+                    <option value="nego">Negosiasi</option>
+                  </select>
+                  <span class="form-error-msg" id="b2c-budget-error" role="alert"></span>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-primary-b2c btn-full" style="margin-top:8px">
+                  Dapatkan Penawaran &amp; Template Proposal
+                </button>
+
+                <!-- Expectation setter -->
+                <p style="font-size:12px; color:#0a5e62; text-align:center; margin:0; display:flex; align-items:center; justify-content:center; gap:6px; font-family:'Plus Jakarta Sans',sans-serif">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Tim kami membalas dalam 2 jam
+                </p>
+
+              </div>
+            </form>
+
+            <!-- Success state B2C -->
+            <div id="success-b2c" class="success-state" role="status" aria-live="polite">
+              <div class="check-circle" style="background:#E6F7F8">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0D7377" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  style="stroke-dasharray:100; stroke-dashoffset:100; animation:draw 600ms ease forwards">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h3 style="font-size:20px; font-weight:700; color:#0D7377; margin:0; font-family:'DM Serif Display',serif">
+                Terima kasih, <span class="success-name"></span>!
+              </h3>
+              <p style="font-size:15px; color:#4B4B4B; margin:0; text-align:center; line-height:1.65">
+                Kami akan menghubungi Anda di <strong class="success-phone"></strong> dalam <strong class="success-time"></strong> dengan penawaran dan template proposal.
+              </p>
+              <a href="#" class="btn-wa" aria-label="Chat WhatsApp langsung dengan tim SatuBumi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat WhatsApp Sekarang
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /b2c-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: IMPACT NUMBERS FULL-WIDTH
+       ============================================================ -->
+  <section id="impact-numbers" aria-labelledby="impact-headline"
+    style="background:#1B3A2D; padding:80px 0">
+    <div class="container-main">
+
+      <h2 id="impact-headline" class="section-reveal"
+        style="font-size:clamp(22px,3vw,32px); font-weight:700; color:#B2D8C5; text-align:center; margin:0 0 56px; letter-spacing:-0.01em">
+        Angka yang Berbicara Sendiri
+      </h2>
+
+      <!-- 3x2 grid (mobile: 2x3) -->
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:40px 24px" id="impact-grid" role="list">
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="2343" data-suffix="" aria-label="2343 kilogram" id="cnt-1">2343</div>
+          <p class="impact-metric-label">kg sampah Citarum terdokumentasi</p>
+        </div>
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="9" aria-label="9 publikasi" id="cnt-2">9</div>
+          <p class="impact-metric-label">Publikasi riset terindeks SINTA</p>
+        </div>
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="1800" data-suffix="+" aria-label="lebih dari 1800 peserta" id="cnt-3">1800+</div>
+          <p class="impact-metric-label">Peserta aktif program</p>
+        </div>
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="50" data-suffix="+" aria-label="lebih dari 50 klien" id="cnt-4">50+</div>
+          <p class="impact-metric-label">Klien &amp; institusi aktif</p>
+        </div>
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="100" data-suffix="%" aria-label="100 persen" id="cnt-5">100%</div>
+          <p class="impact-metric-label">Data dampak terverifikasi per event</p>
+        </div>
+
+        <div role="listitem" style="text-align:center; padding:24px 16px">
+          <div class="impact-metric-number" data-count="0" data-prefix="Rp" aria-label="Nol rupiah" id="cnt-6">Rp0</div>
+          <p class="impact-metric-label">Budget iklan untuk 78.000 tayangan organik</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: TESTIMONIALS
+       ============================================================ -->
+  <section aria-labelledby="testimonial-headline"
+    style="padding:96px 0; background:#FFFFFF">
+    <div class="container-main">
+
+      <h2 id="testimonial-headline" class="section-reveal"
+        style="font-size:clamp(26px,4vw,36px); font-weight:700; color:#1A1A1A; text-align:center; margin:0 0 48px">
+        Kata Mereka yang Sudah Bekerja Sama
+      </h2>
+
+      <div style="display:grid; grid-template-columns:1fr; gap:24px" id="testimonial-grid">
+
+        <!-- Testimonial B2B -->
+        <div class="testimonial-card testimonial-card-b2b section-reveal" role="article" aria-label="Testimoni korporasi">
+          <div class="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote style="margin:0 0 24px; position:relative; z-index:1; padding-top:24px">
+            <p style="font-size:clamp(15px,2vw,16px); color:#1A1A1A; line-height:1.7; margin:0; font-style:italic">
+              "Kami menggunakan data River Cleanup SatuBumi untuk mengisi bagian Environment di sustainability report 2025 kami. Tim mereka menyerahkan impact report lengkap dalam <strong>3 hari setelah event</strong> — format datanya langsung sesuai dengan yang diminta auditor kami."
+            </p>
+          </blockquote>
+          <div style="display:flex; align-items:center; gap:12px">
+            <div class="avatar" style="background:linear-gradient(135deg,#2D5A45,#4A8C6E)" aria-hidden="true">AB</div>
+            <div>
+              <p style="font-weight:700; font-size:14px; margin:0; color:#1A1A1A">Ahmad Budianto</p>
+              <p style="font-size:13px; color:#666; margin:0; margin-top:2px">CSR Manager, PT Energi Nusantara</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial B2C -->
+        <div class="testimonial-card testimonial-card-b2c section-reveal" role="article" aria-label="Testimoni kampus">
+          <div class="testimonial-quote-mark" aria-hidden="true" style="color:#E6F7F8">&ldquo;</div>
+          <blockquote style="margin:0 0 24px; position:relative; z-index:1; padding-top:24px">
+            <p style="font-size:clamp(15px,2vw,16px); color:#1A1A1A; line-height:1.7; margin:0; font-style:italic">
+              "<strong>200 peserta</strong> dari BEM Faperta dan 8 UKM bergabung, dan semua dapat sertifikat di hari yang sama. Dokumentasi fotonya sudah dipakai untuk <strong>4 laporan kemahasiswaan</strong> semester ini."
+            </p>
+          </blockquote>
+          <div style="display:flex; align-items:center; gap:12px">
+            <div class="avatar" style="background:linear-gradient(135deg,#0D7377,#14A8AC)" aria-hidden="true">NA</div>
+            <div>
+              <p style="font-weight:700; font-size:14px; margin:0; color:#1A1A1A">Nadia Aurel Setiawan</p>
+              <p style="font-size:13px; color:#666; margin:0; margin-top:2px">Ketua BEM Faperta, Universitas Padjadjaran</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6: FAQ ACCORDION
+       ============================================================ -->
+  <section aria-labelledby="faq-headline"
+    style="padding:96px 0; background:#F8F6F2">
+    <div class="container-main" style="max-width:760px">
+
+      <h2 id="faq-headline" class="section-reveal"
+        style="font-size:clamp(26px,4vw,36px); font-weight:700; color:#1A1A1A; text-align:center; margin:0 0 8px">
+        Pertanyaan yang Sering Ditanyakan
+      </h2>
+      <p class="section-reveal" style="text-align:center; color:#666; margin:0 0 48px; font-size:15px">
+        Semua yang perlu Anda tahu sebelum memutuskan.
+      </p>
+
+      <!-- B2B FAQ heading -->
+      <p class="section-reveal" style="font-size:12px; font-weight:700; color:#4A8C6E; letter-spacing:0.08em; text-transform:uppercase; margin:0 0 16px; font-family:'Plus Jakarta Sans',sans-serif">
+        Untuk Korporasi
+      </p>
+
+      <div class="section-reveal" style="margin-bottom:32px">
+
+        <div class="accordion-item" id="faq-1">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Apakah Impact Report SatuBumi dapat digunakan sebagai lampiran laporan keberlanjutan sesuai POJK 51/2017?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Ya. Impact Report SatuBumi dirancang dengan mengacu pada parameter Environment dalam POJK 51/2017. Setiap report mencakup: data kuantitatif volume sampah per event (dalam kg), metodologi pengukuran yang telah divalidasi melalui 9 publikasi terindeks SINTA, koordinat lokasi, jumlah peserta, dan analisis dampak lingkungan. Format data ini kompatibel dengan tabel pelaporan sustainability report yang umum digunakan auditor ESG di Indonesia.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" id="faq-2">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Berapa lama Impact Report disiapkan setelah event?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Standar kami adalah 3 hari kerja setelah event selesai. Impact Report mencakup laporan PDF terstruktur, dataset mentah dalam format spreadsheet, dan dokumentasi foto event bersolution tinggi. Untuk klien korporasi dengan kebutuhan deadline pelaporan khusus, kami menerima pengaturan jadwal penyerahan sejak awal kontrak.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" id="faq-3">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Apakah metodologi pengukuran dampak sudah terverifikasi secara akademis?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Metodologi SatuBumi dibangun di atas 9 publikasi riset yang terindeks SINTA (Sistem Informasi Riset Nasional Kementerian Dikti). Publikasi ini mencakup metode sampling, protokol penimbangan, klasifikasi jenis sampah, dan kalkulasi impact per unit peserta. Detail sitasi akademis tersedia dalam dokumen metodologi yang dapat kami kirimkan bersama sample Impact Report.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- B2C FAQ heading -->
+      <p class="section-reveal" style="font-size:12px; font-weight:700; color:#0D7377; letter-spacing:0.08em; text-transform:uppercase; margin:0 0 16px; font-family:'Plus Jakarta Sans',sans-serif">
+        Untuk Kampus &amp; BEM
+      </p>
+
+      <div class="section-reveal">
+
+        <div class="accordion-item" id="faq-4">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Apakah ada sertifikat untuk setiap peserta?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Ya. Setiap peserta mendapatkan sertifikat digital berformat PDF dengan nama lengkap, tanggal event, lokasi, dan data dampak individual (kontribusi kg sampah per peserta). Sertifikat diterbitkan dan dapat diunduh di hari yang sama dengan event berlangsung. Untuk kebutuhan sertifikat fisik dengan emboss atau tanda tangan basah, tersedia dengan biaya cetak tambahan.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" id="faq-5">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Berapa budget minimum untuk program River Cleanup?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Program River Cleanup untuk kampus tersedia mulai dari Rp3,5 juta untuk 30–50 peserta, sudah termasuk: koordinasi lapangan, alat kebersihan, dokumentasi foto, dan sertifikat digital seluruh peserta. Budget meningkat secara proporsional berdasarkan jumlah peserta dan lokasi event. Kami transparan soal struktur biaya — tidak ada biaya tersembunyi. Isi form di atas dan kami kirimkan rincian penawaran lengkap dalam 2 jam.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item" id="faq-6">
+          <button class="accordion-trigger" tabindex="0">
+            <span>Bisa bantu buatkan template proposal untuk rektorat?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-content-inner">
+              Ya, ini sudah termasuk dalam paket kami untuk semua klien kampus. Template proposal mencakup: latar belakang kegiatan, tujuan dan manfaat akademis, susunan kegiatan, anggaran rinci, dan lampiran kredensial SatuBumi (publikasi SINTA, sertifikat kemitraan). Template dapat langsung Anda sesuaikan dengan format pengajuan di kampus masing-masing. Biasanya selesai dalam 30 menit setelah form diisi.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7: FINAL CTA
+       ============================================================ -->
+  <section aria-labelledby="final-cta-headline"
+    style="padding:96px 0; background:#FFFFFF; text-align:center">
+    <div class="container-main" style="max-width:640px">
+
+      <h2 id="final-cta-headline" class="section-reveal"
+        style="font-size:clamp(28px,4vw,40px); font-weight:700; color:#1A1A1A; margin:0 0 16px">
+        Mulai Program ESG Anda Sekarang.
+      </h2>
+      <p class="section-reveal" style="font-size:16px; color:#4B4B4B; margin:0 0 40px; line-height:1.65">
+        Pilih jalur yang sesuai dengan kebutuhan Anda dan tim kami akan menghubungi dalam waktu singkat.
+      </p>
+
+      <div class="section-reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-bottom:32px">
+        <a href="#korporasi" class="btn-primary-b2b" aria-label="Mulai program ESG untuk Korporasi CSR">
+          Untuk Korporasi CSR &rarr;
+        </a>
+        <a href="#kampus" class="btn-outline-b2c" aria-label="Mulai program untuk Kampus dan BEM">
+          Untuk Kampus &amp; BEM &rarr;
+        </a>
+      </div>
+
+      <div class="section-reveal" style="border-top:1px solid #E8E8E8; padding-top:24px; margin-top:8px">
+        <p style="font-size:14px; color:#666; display:flex; align-items:center; justify-content:center; gap:8px; margin:0; flex-wrap:wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Atau langsung chat:
+          <a href="https://wa.me/628xxxxxxxxx" style="color:#1B3A2D; font-weight:600; text-decoration:none"
+            aria-label="Chat WhatsApp SatuBumi" target="_blank" rel="noopener noreferrer">
+            wa.me/628xxxxxxxxx
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 8: FOOTER
+       ============================================================ -->
+  <footer role="contentinfo"
+    style="background:#1B3A2D; padding:64px 0 32px; color:#F8F6F2">
+    <div class="container-main">
+
+      <div style="display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:48px">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px">
+            <div style="width:36px; height:36px; background:linear-gradient(135deg,#4A8C6E,#F5A623); border-radius:8px; display:flex; align-items:center; justify-content:center" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <span style="font-family:'DM Serif Display',serif; font-size:20px; font-weight:700; color:#F8F6F2">SatuBumi</span>
+          </div>
+          <p style="font-size:13px; color:#B2D8C5; margin:0; line-height:1.6; max-width:260px">
+            Research-Backed ESG Education Partner. Mengubah setiap River Cleanup menjadi data yang dapat dipertanggungjawabkan.
+          </p>
+        </div>
+
+        <!-- Col 2: Links -->
+        <div>
+          <p style="font-size:11px; font-weight:700; color:#4A8C6E; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; font-family:'Plus Jakarta Sans',sans-serif">
+            Hubungi Kami
+          </p>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <a href="https://instagram.com/satubumi_lestari" target="_blank" rel="noopener noreferrer"
+              style="display:flex; align-items:center; gap:8px; color:#B2D8C5; text-decoration:none; font-size:14px"
+              aria-label="Instagram SatuBumi Lestari">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              @satubumi_lestari
+            </a>
+            <a href="mailto:hello@satubumi.id"
+              style="display:flex; align-items:center; gap:8px; color:#B2D8C5; text-decoration:none; font-size:14px"
+              aria-label="Email SatuBumi">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              hello@satubumi.id
+            </a>
+            <a href="https://wa.me/628xxxxxxxxx" target="_blank" rel="noopener noreferrer"
+              style="display:flex; align-items:center; gap:8px; color:#B2D8C5; text-decoration:none; font-size:14px"
+              aria-label="WhatsApp SatuBumi">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 3: Legal -->
+        <div>
+          <p style="font-size:11px; font-weight:700; color:#4A8C6E; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; font-family:'Plus Jakarta Sans',sans-serif">
+            Legal
+          </p>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <a href="/privacy" style="color:#B2D8C5; text-decoration:none; font-size:14px">Privacy Policy</a>
+            <a href="/terms" style="color:#B2D8C5; text-decoration:none; font-size:14px">Terms of Service</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between">
+        <p style="font-size:12px; color:#4A8C6E; margin:0">
+          &copy; 2026 SatuBumi Lestari. All rights reserved.
+        </p>
+        <p style="font-size:11px; color:#4A8C6E; margin:0">
+          Hosted on Cloudflare Pages
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS — deferred, non-blocking
+       ============================================================ -->
+  <script>
+    // Initialize trust bar (clone template for marquee)
+    (function () {
+      var tpl = document.getElementById('trust-items-tpl');
+      if (!tpl) return;
+      var track1 = document.getElementById('trust-track-1');
+      var track2 = document.getElementById('trust-track-2');
+      if (track1) track1.innerHTML = tpl.innerHTML;
+      if (track2) track2.innerHTML = tpl.innerHTML;
+
+      // Show desktop version on wider screens
+      function checkWidth() {
+        var isDesktop = window.innerWidth >= 768;
+        var desktopEl = document.getElementById('trust-bar-desktop');
+        var mobileEl = document.getElementById('trust-bar-mobile');
+        if (desktopEl) desktopEl.style.display = isDesktop ? 'block' : 'none';
+        if (mobileEl) mobileEl.style.display = isDesktop ? 'none' : 'block';
+      }
+      checkWidth();
+      window.addEventListener('resize', checkWidth, { passive: true });
+
+      // Two-column grid on desktop for B2B/B2C sections
+      function applyGridBreakpoints() {
+        var isTwoCol = window.innerWidth >= 1024;
+        ['b2b-grid', 'b2c-grid'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) {
+            el.style.gridTemplateColumns = isTwoCol ? '1fr 1fr' : '1fr';
+          }
+        });
+
+        // Impact numbers: 3 cols on desktop, 2 on mobile
+        var impactGrid = document.getElementById('impact-grid');
+        if (impactGrid) {
+          if (window.innerWidth >= 768) {
+            impactGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+          } else {
+            impactGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+          }
+        }
+
+        // Testimonials: side-by-side on desktop
+        var testGrid = document.getElementById('testimonial-grid');
+        if (testGrid) {
+          testGrid.style.gridTemplateColumns = window.innerWidth >= 768 ? '1fr 1fr' : '1fr';
+        }
+
+        // Footer columns
+        var footerGrid = testGrid ? testGrid.closest('footer') : null;
+      }
+      applyGridBreakpoints();
+      window.addEventListener('resize', applyGridBreakpoints, { passive: true });
+
+      // Footer 3 cols on desktop
+      var footer = document.querySelector('footer .container-main > div:first-child');
+      function applyFooterGrid() {
+        if (!footer) return;
+        footer.style.gridTemplateColumns = window.innerWidth >= 768 ? 'repeat(3, 1fr)' : '1fr';
+      }
+      applyFooterGrid();
+      window.addEventListener('resize', applyFooterGrid, { passive: true });
+    })();
+  </script>
+
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

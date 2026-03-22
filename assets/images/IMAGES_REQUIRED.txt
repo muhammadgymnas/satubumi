@@ -1,0 +1,16 @@
+Letakkan foto-foto berikut di folder ini dalam format WebP, max 150KB per file:
+
+hero-river-cleanup.webp   — Foto utama hero: peserta aktif River Cleanup, landscape 16:9
+                            Minimal 800×450px. Harus ada aktivitas nyata, wajah peserta, dan idealnya
+                            terlihat spanduk/logo program.
+
+photo-cleanup-1.webp      — Grid foto B2C: peserta memungut sampah, portrait/square 1:1, min 400×400px
+photo-cleanup-2.webp      — Grid foto B2C: group photo dengan senyum, 1:1
+photo-cleanup-3.webp      — Grid foto B2C: momen penyerahan sertifikat, 1:1
+
+og-image.jpg              — Open Graph share image: 1200×630px, JPEG, max 200KB
+
+Konversi ke WebP:
+  npx @squoosh/cli --webp '{"quality":82}' foto-asli.jpg
+
+Atau online: squoosh.app
